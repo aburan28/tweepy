@@ -199,7 +199,7 @@ class Stream(object):
         # per tweet. Values higher than ~1kb will increase latency by waiting
         # for more data to arrive but may also increase throughput by doing
         # fewer socket read calls.
-        self.chunk_size = options.get("chunk_size",  512)
+        self.chunk_size = options.get("chunk_size",  4096)
 
         self.verify = options.get("verify", True)
 
